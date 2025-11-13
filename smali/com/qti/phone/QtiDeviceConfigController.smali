@@ -111,7 +111,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;II)V
-    .locals 2
+    .locals 3
 
     .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -230,7 +230,9 @@
     .line 116
     iget-object p2, p0, Lcom/qti/phone/QtiDeviceConfigController;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p2, v0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    const/4 v2, 0x2
+
+    invoke-virtual {p2, v0, p1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
     .line 119
     iget-object p1, p0, Lcom/qti/phone/QtiDeviceConfigController;->mHandler:Landroid/os/Handler;
